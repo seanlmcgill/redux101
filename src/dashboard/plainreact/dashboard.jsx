@@ -7,10 +7,15 @@ import { MainView } from './mainView';
 
 export const Dashboard = () => {
   const [todos, setTodos] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const getTodos = async () => {
       const result = await axios.get('./todos.json');
-      setTodos(result.data);
+      // added delay for effect
+      setTimeout(() => {
+        setTodos(result.data);
+        setLoading(false);
+      }, 2000);
     };
     getTodos();
   }, []);
@@ -19,11 +24,13 @@ export const Dashboard = () => {
     <Container>
       <Navbar expand="lg" variant="dark" bg="dark">
         <Navbar.Brand href="#">Plain React</Navbar.Brand>
-        <Badge pill variant="primary">
-          Todo count {todos.length}
-        </Badge>
+        {!loading ? (
+          <Badge pill variant="primary">
+            Todo count {todos.length}
+          </Badge>
+        ) : null}
       </Navbar>
-      <MainView todos={todos} />
+      <MainView todos={todos} loading={loading} />
     </Container>
   );
 };

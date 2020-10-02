@@ -5,10 +5,13 @@ import { Provider } from 'react-redux';
 import { App } from './app';
 import * as serviceWorker from './serviceWorker';
 import { configureStore } from './store';
+import { loadTodos } from './dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 
 const store = configureStore();
+
+store.dispatch(loadTodos());
 
 // Wrap app in <Provider> to give access to Redux to component tree
 ReactDOM.render(

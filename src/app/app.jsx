@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
-import { PlainReactDashboard } from '../dashboard';
+import { PlainReactDashboard, ReduxClassBasedDashboard, ReduxHooksDashboard } from '../dashboard';
 import './app.scss';
 
 export const App = () => {
@@ -15,12 +15,12 @@ export const App = () => {
         </Tab>
         <Tab eventKey="reduxClass" title="Using Redux (Class Based)">
           <div className="dashboard-section">
-            <PlainReactDashboard />
+            <ReduxClassBasedDashboard />
           </div>
         </Tab>
         <Tab eventKey="reduxHooks" title="Using Redux (with Hooks)">
           <div className="dashboard-section">
-            <PlainReactDashboard />
+            <ReduxHooksDashboard />
           </div>
         </Tab>
       </Tabs>
