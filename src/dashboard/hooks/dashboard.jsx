@@ -9,9 +9,9 @@ export const Dashboard = () => {
   const { list, loading } = useSelector((state) => state.todos);
   return (
     <Container>
-      <Navbar expand="lg" variant="dark" bg="dark">
+      <Navbar expand="lg" variant="dark" bg="info">
         <Navbar.Brand href="#">Redux (Hooks)</Navbar.Brand>
-        {loading ? (
+        {!loading ? (
           <Badge pill variant="primary">
             Todo count {list.length}
           </Badge>

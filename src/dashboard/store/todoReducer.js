@@ -12,8 +12,6 @@ export function todoReducer(state = initialState, action) {
         error: false
       };
     case types.LOAD_TODOS_SUCCESS:
-      console.log('LOAD_TODOS_SUCCESS');
-      console.log(action);
       return {
         ...state,
         list: action.todos,

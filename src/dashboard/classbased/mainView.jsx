@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Jumbotron, Button } from 'react-bootstrap';
+import { Jumbotron, Button, Spinner } from 'react-bootstrap';
 import TodoList from './todoList';
 import { loadTodos } from '../store';
 
@@ -8,14 +8,22 @@ class MainView extends Component {
   render() {
     return (
       <Jumbotron>
-        <TodoList todos={this.props.list} />
-        <Button
-          onClick={(e) => {
-            e.preventDefault();
-            this.props.refresh();
-          }}>
-          Re-load
-        </Button>
+        {this.props.loading ? (
+          <Spinner animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+        ) : (
+          <>
+            <TodoList />
+            <Button
+              onClick={(e) => {
+                e.preventDefault();
+                this.props.refresh();
+              }}>
+              Re-load
+            </Button>
+          </>
+        )}
       </Jumbotron>
     );
   }

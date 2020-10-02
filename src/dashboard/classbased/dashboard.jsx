@@ -9,7 +9,7 @@ class Dashboard extends Component {
   render() {
     return (
       <Container>
-        <Navbar expand="lg" variant="dark" bg="dark">
+        <Navbar expand="lg" variant="dark" bg="danger">
           <Navbar.Brand href="#">Redux (Class Based)</Navbar.Brand>
           {!this.props.loading ? (
             <Badge pill variant="primary">
