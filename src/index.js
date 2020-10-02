@@ -2,20 +2,19 @@ import 'core-js/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './index.scss';
 import { App } from './app';
 import * as serviceWorker from './serviceWorker';
 import { configureStore } from './store';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss';
 
 const store = configureStore();
 
 // Wrap app in <Provider> to give access to Redux to component tree
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 

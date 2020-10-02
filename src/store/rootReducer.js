@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { todoReducer as todos } from '../todos';
+import { todoReducer as todos } from '../dashboard';
 
 // Aggregate all reducers
 const rootReducer = combineReducers({

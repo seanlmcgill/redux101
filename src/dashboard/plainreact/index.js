@@ -1,4 +1,1 @@
-export * from './mainView';
-export * from './todoList';
-export * from './todoItem';
-export * from './dashboard';
+export { Dashboard as PlainReactDashboard } from './dashboard';
