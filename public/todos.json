@@ -1,0 +1,12 @@
+[
+  { "id": 1, "description": "Buy golf balls", "completed": false },
+  { "id": 2, "description": "Practice guitar today", "completed": false },
+  { "id": 3, "description": "Re-start workout plan on Monday at 6am", "completed": false },
+  { "id": 4, "description": "Fix the treads on the basements steps", "completed": false },
+  { "id": 5, "description": "Mow the lawn", "completed": false },
+  { "id": 6, "description": "Do grocery shopping", "completed": false },
+  { "id": 7, "description": "Get to bed earlier today", "completed": false },
+  { "id": 8, "description": "Complain about the world", "completed": false },
+  { "id": 9, "description": "Realize complaining didnt work", "completed": false },
+  { "id": 10, "description": "Eat a pizza", "completed": false }
+]
